@@ -2,6 +2,7 @@ import discord
 import asyncio
 from os import system
 import time
+import os
 
 client = discord.Client()
 
@@ -20,4 +21,5 @@ async def on_ready():
                 system("start Start_Server.cmd")
                 time.sleep(20)
                 await message.channel.send("엘로스서버의 리붓이 완료되었습니다!")
-client.run("NzI5MjU4NjI0NDIxMTk5ODky.XxOcBg.y7WUDhm_WHEyF1ys8ta0Ap_KVAY")
+access_token = os.environ["BOT_TOKEN"]
+client.run("access_token")
